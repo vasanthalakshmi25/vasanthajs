@@ -45,3 +45,18 @@ if(a === 20){
 }
 // Ternary Operator
 10 === 20 ? console.log(' a is equal to b') :  console.log(' a is not equal to b');
+
+//for-of loop
+const arr = [1,2,3,4];
+
+/* for(var i =0; i<10; i++){}
+for(var index of arr){}
+*/
+
+for(var i = 0; i < arr.length; i++){ // 3tmie 
+    console.log(arr[i], "for loop")
+}
+
+for( var value of arr){   //1time
+    console.log(value)
+}
