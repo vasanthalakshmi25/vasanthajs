@@ -13,10 +13,8 @@
 12.includes
 13.find
 14.findIndex
-15.Split
-16.Join
-17.Every
-18.Some*/
+15.Every
+16.Some*/
 
 //1.push:-inserting elements at end of the array
 const users  = ['name1', 'name2', 'name3'];
@@ -125,6 +123,39 @@ const findArr = [1,2,3,4,5];
 const resultArr = findArr.find( (val) => val === 5 ); // value
 console.log(resultArr)
 
-//findIndex() - retrun an index of value
+//14. findIndex() - retrun an index of value
 const findIndex = findArr.findIndex( (val) => val === 5 );
 console.log(findIndex)
+
+// 15. every
+
+const arr6 = [2,4,6,7]
+
+//2 % 2 === 1 - false
+const isEven = arr6.every( (val) => val % 2 === 0);
+console.log(isEven)
+
+//16.some 
+
+const isEvenNumber = arr6.some( (val) => val % 2 === 0);
+
+console.log(isEvenNumber)
+
+//17.map - create a new array with result of calling provided the function 
+
+const sum = arr6.map( (num) => num + 2 );
+
+console.log(sum, arr)
+
+//18.filter - create a new array 
+
+const isEvenNum = arr6.filter( (val) => val % 2 === 0 );
+console.log(isEvenNum)
+
+//19.reduce
+
+const sumArr = arr6.reduce( (acc, curr) => { // 0 , 2  // 2 , 4
+  return acc + curr   // 0 + 2 // 2  // 2 + 4 // 6
+});
+
+console.log(sumArr)
