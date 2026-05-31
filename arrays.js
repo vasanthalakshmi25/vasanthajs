@@ -5,6 +5,7 @@
 
 //const arr = [1,2,3,4,5]; // 0 1 2 3 4
 //arr[0] =1
+
 //creating array in two ways 
 //1. array literal
 
