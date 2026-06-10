@@ -462,7 +462,7 @@ userDetails.then( (result) => {
 // - all promise are success - then it suucess - 
 // - any promise failed - then it will first reject resaon
 //promise.all( [promie1,promise2])
-/*console.log("===========================================")
+console.log("===========================================")
 let api1 = new Promise( (res,rej) => {
     setTimeout( () => res("Resolved API1"),1000)
 });
@@ -497,53 +497,4 @@ Promise.any( [api1,api2,api3]).then( (value) => {
 }).catch( (error) => {
     console.log(error.message)
 });
-*/
-//closures
-function outerFunc(){
-    
-    let outervar = "I am outside";
-    
-    function innerFunc(){
-        console.log(outervar);
-    }
-    return innerFunc
-}
-
-function exec(){
-    const myInnerFun = outerFunc();
-    myInnerFun();
-}
-exec();
-
-function outerFun(x){
-    return function innerFun(y){
-        return function innerFun1(z){
-            return x+y+z;
-        }
-    }
-};
-
-const value = outerFun(2)(3)(4);
-
-console.log(value)
-
-
-//IIFE(immediately Invoked function expersion)
-//synatx 
-
-/*
-( function (){
-    //logic
-})()*/
-
-
-function names(){
-    console.log("Hello")
-};
-
-names();
-
-( function () {
-    console.log("IIFE")
-})();
 
